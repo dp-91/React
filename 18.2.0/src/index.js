@@ -2,20 +2,14 @@ import React from 'react'
 import { ReactDOM, createRoot } from "react-dom/client";
 import { useEffect, Component } from 'react';
 
-class App extends Component {
-  render() {
-    return (
-      <h1>App</h1>
-    );
-  }
-}
+import List from './component/List/List';
 
 const AppWithCallbackAfterRender = () => {
   useEffect(() => {
     console.log('rendered');
   });
 
-  return <App tab="home" />
+  return <div><List /></div>
 }
 
 const container = document.getElementById('root');
